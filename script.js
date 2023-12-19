@@ -36,6 +36,12 @@ function getPasswordOptions() {
         return null;
       }
     // Confirm which character sets to use
+
+    var includeSpecialCharacters = confirm("Do you want special characters included?");
+    var includeNumericCharacters = confirm("Do you want number characters included?");
+    var includeLowerCasedCharacters = confirm("Do you want lower case characters included?");
+    var includeUpperCasedCharacters = confirm("Do you want upper case characters included?");
+     
     // If the user answers false for all, either return out of the function or call the function again
     
     // Once they select a character set:
