@@ -11,13 +11,6 @@ var lowerCasedCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 
-
-let length = 0;
-
-let chosenCharSet = [];
-
-
-
 // You can store the generatedPassword as a string and concat each character OR
 // as an array and push each character, then join once you have enough characters
   
@@ -34,7 +27,7 @@ function getPasswordOptions() {
     if (isNaN(length) || length < 8 || length > 128) {
         alert("Please enter a valid number between 8 and 128.");
         return null;
-      }
+    }
     // Confirm which character sets to use
 
     var includeSpecialCharacters = confirm("Do you want special characters included?");
@@ -58,6 +51,16 @@ function getPasswordOptions() {
     // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
     
     // Once character sets are selected, move on to generating random characters
+    var passwordOptions = {
+        length: length,
+        includeSpecialCharacters: includeSpecialCharacters,
+        includeNumericCharacters: includeNumericCharacters,
+        includeLowerCasedCharacters: includeLowerCasedCharacters,
+        includeUpperCasedCharacters: includeUpperCasedCharacters
+      };
+    
+      return passwordOptions;
+
 }  
 // Function for getting a random element from an array
   function getRandom(arr) {
