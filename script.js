@@ -10,110 +10,71 @@ var lowerCasedCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
-// Criteria 1: Click on the red button to start the prompt
-// Criteria 2: Present a series of prompts
-// Criteria 3: The prompts should be written in or clicked 'ok' to mean 'true' or 'cancel' to mean 'false', using a boolean as a way of completing that method
-// Criteria 4: 
+
+
+let length = 0;
+
+let chosenCharSet = [];
 
 
 
-// this function alone isn't generating the prompt, i need to find out how to actually see it
+// You can store the generatedPassword as a string and concat each character OR
+// as an array and push each character, then join once you have enough characters
+  
+// Function to prompt user for password options
 function getPasswordOptions() {
-    var length = parseInt(prompt("Type the length of characters you want in your password. The password must be between 8 and 128 characters."));
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////// 17:18pm on Tue 19th Dec - I'm commenting out the information below while I begin on this task to see if I can understand it better when I write it myself
-////////////////////////////
-
-
-//   const charOptions = [];
-//   const generatedPassword = '';
-//   // You can store the generatedPassword as a string and concat each character OR
-//   // as an array and push each character, then join once you have enough characters
+   
+   // Prompt for password length
+   var length = prompt("Type the length of characters you want in your password. The password must be between 8 and 128 characters.");
+    // At least 8 characters, no more than 128 characters
+    if (isNaN(length) || length < 8 || length > 128) {
+        alert("Please enter a valid number between 8 and 128.");
+        return null;
+      }
+    // Check if the length is a valid number and within the specified range
+    // Conditional to check that the number that was entered is in range
+    // Prompts store data as strings, so need to parse into a number
+    // If the user's input is out of range, either return out of the function or call the function again
   
-//   // Function to prompt user for password options
-//   function getPasswordOptions() {
-//     // Prompt for password length
-//     // At least 8 characters, no more than 128 characters
-//     // Conditional to check that the number that was entered is in range
-//     // Prompts store data as strings, so need to parse into a number
-//     // If the user's input is out of range, either return out of the function or call the function again
-  
-//     // Confirm which character sets to use
-//     // If the user answers false for all, either return out of the function or call the function again
+    // Confirm which character sets to use
+    // If the user answers false for all, either return out of the function or call the function again
     
-//     // Once they select a character set:
-//     // Generate a random character for each selected character set
-//     // Either push selected character sets to a mega-array of all selected characters
-//     // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
+    // Once they select a character set:
+    // Generate a random character for each selected character set
+    // Either push selected character sets to a mega-array of all selected characters
+    // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
     
-//     // Once character sets are selected, move on to generating random characters
-//   }
+    // Once character sets are selected, move on to generating random characters
+}  
+// Function for getting a random element from an array
+  function getRandom(arr) {
+    // Need a variable to hold the password as it's being generated
+    // Need a variable to hold the index that's being generated
   
-//   // Function for getting a random element from an array
-//   function getRandom(arr) {
-//     // Need a variable to hold the password as it's being generated
-//     // Need a variable to hold the index that's being generated
+    // For loop that loops the number of times that matches the length the user chose
+    // Generate a random number
+    // That number is the index for a character in the mega-array
+    // So then, mega-array[generated-index] is the actual character
+    // Add that character to the password
   
-//     // For loop that loops the number of times that matches the length the user chose
-//     // Generate a random number
-//     // That number is the index for a character in the mega-array
-//     // So then, mega-array[generated-index] is the actual character
-//     // Add that character to the password
+    // Once we finish the for loop, return the generated password
+  }
   
-//     // Once we finish the for loop, return the generated password
-//   }
+  // Function to generate password with user input
+  function generatePassword() {
   
-//   // Function to generate password with user input
-//   function generatePassword() {
+  }
   
-//   }
+  // Get references to the #generate element
+  var generateBtn = document.querySelector('#generate');
   
-//   // Get references to the #generate element
-//   var generateBtn = document.querySelector('#generate');
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector('#password');
   
-//   // Write password to the #password input
-//   function writePassword() {
-//     var password = generatePassword();
-//     var passwordText = document.querySelector('#password');
+    passwordText.value = password;
+  }
   
-//     passwordText.value = password;
-//   }
-  
-//   // Add event listener to generate button
-//   generateBtn.addEventListener('click', writePassword);
+  // Add event listener to generate button
+  generateBtn.addEventListener('click', getPasswordOptions);
