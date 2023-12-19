@@ -2,7 +2,8 @@
 
 * {
     background-color: rgb(38, 36, 36);
-},
+}
+
 *::before,
 *::after {
   box-sizing: border-box;
