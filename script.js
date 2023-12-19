@@ -10,7 +10,17 @@ var lowerCasedCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
+// Criteria 1: Click on the red button to start the prompt
+// Criteria 2: Present a series of prompts
+// Criteria 3: The prompts should be written in or clicked 'ok' to mean 'true' or 'cancel' to mean 'false', using a boolean as a way of completing that method
+// Criteria 4: 
 
+
+
+// this function alone isn't generating the prompt, i need to find out how to actually see it
+function getPasswordOptions() {
+    var length = parseInt(prompt("Type the length of characters you want in your password. The password must be between 8 and 128 characters."));
+}
 
 
 
