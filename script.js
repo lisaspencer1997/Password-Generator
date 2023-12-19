@@ -116,8 +116,7 @@ function getPasswordOptions() {
 
     for (let i = 0; i < remainingLength; i++) {
         const randomChar = getRandom (possibleCharacters);
-        guaranteedCharacters (randomChar);
-        
+        guaranteedCharacters.push (randomChar);
     }
   
     var password = guaranteedCharacters
