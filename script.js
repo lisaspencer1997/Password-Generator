@@ -25,17 +25,16 @@ let chosenCharSet = [];
 function getPasswordOptions() {
    
    // Prompt for password length
-   var length = prompt("Type the length of characters you want in your password. The password must be between 8 and 128 characters.");
+   var length = parseInt(prompt("Type the length of characters you want in your password. The password must be between 8 and 128 characters."));
     // At least 8 characters, no more than 128 characters
-    if (isNaN(length) || length < 8 || length > 128) {
-        alert("Please enter a valid number between 8 and 128.");
-        return null;
-      }
     // Check if the length is a valid number and within the specified range
     // Conditional to check that the number that was entered is in range
     // Prompts store data as strings, so need to parse into a number
     // If the user's input is out of range, either return out of the function or call the function again
-  
+    if (isNaN(length) || length < 8 || length > 128) {
+        alert("Please enter a valid number between 8 and 128.");
+        return null;
+      }
     // Confirm which character sets to use
     // If the user answers false for all, either return out of the function or call the function again
     
