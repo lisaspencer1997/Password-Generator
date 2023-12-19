@@ -92,9 +92,25 @@ function getPasswordOptions() {
     if (options.includeSpecialCharacters) {
         possibleCharacters =
         possibleCharacters.concat(specialCharacters);
-        guaranteedCharacters.push
+        guaranteedCharacters.push(getRandom(specialCharacters));
+    }
+
+    if (options.includeNumericCharacters) {
+        possibleCharacters = possibleCharacters.concat(numericCharacters);
+        guaranteedCharacters.push(getRandom(numericCharacters));
+    }
+
+    if (options.includeLowerCasedCharacters) {
+        possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
+        guaranteedCharacters.push(getRandom(lowerCasedCharacters));
+    }  
+
+    if (options.includeUpperCasedCharacters) {
+        possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
+        guaranteedCharacters.push(getRandom(upperCasedCharacters));
     }
   
+    
 
 
   }
