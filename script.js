@@ -118,12 +118,14 @@ function getPasswordOptions() {
         const randomChar = getRandom (possibleCharacters);
         guaranteedCharacters.push (randomChar);
     }
-  
-    var password = guaranteedCharacters
 
+
+
+    // need the password to be a string rather than an array of characters separated by a comma
+
+    var password = guaranteedCharacters.join("");
+    
     return password;
-
-
   }
 
 
