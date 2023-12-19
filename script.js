@@ -71,7 +71,7 @@ function getPasswordOptions() {
     // That number is the index for a character in the mega-array
     // So then, mega-array[generated-index] is the actual character
     // Add that character to the password
-    var randomIndex = math.floor(Math.random() * arr.length);
+    var randomIndex = Math.floor(Math.random() * arr.length);
     var randomElement = arr[randomIndex];
     return randomElement;
     // Once we finish the for loop, return the generated password
@@ -110,7 +110,7 @@ function getPasswordOptions() {
         guaranteedCharacters.push(getRandom(upperCasedCharacters));
     }
   
-    
+    return password;
 
 
   }
@@ -129,4 +129,4 @@ function getPasswordOptions() {
   }
   
   // Add event listener to generate button
-  generateBtn.addEventListener('click', getPasswordOptions);
+  generateBtn.addEventListener('click', writePassword);
