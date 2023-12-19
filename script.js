@@ -43,7 +43,15 @@ function getPasswordOptions() {
     var includeUpperCasedCharacters = confirm("Do you want upper case characters included?");
      
     // If the user answers false for all, either return out of the function or call the function again
-    
+    if (
+        !includeSpecialCharacters &&
+        !includeNumericCharacters &&
+        !includeLowerCasedCharacters &&
+        !includeUpperCasedCharacters
+    ) {
+        alert("You need at least one character type. Please start again.");
+        return null;
+    }
     // Once they select a character set:
     // Generate a random character for each selected character set
     // Either push selected character sets to a mega-array of all selected characters
