@@ -110,6 +110,8 @@ function getPasswordOptions() {
         guaranteedCharacters.push(getRandom(upperCasedCharacters));
     }
   
+    var password = guaranteedCharacters
+
     return password;
 
 
