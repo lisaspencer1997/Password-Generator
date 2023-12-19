@@ -113,6 +113,12 @@ function getPasswordOptions() {
     var remainingLength = options.length - guaranteedCharacters.length;
 
     // need a for loop to run through the remaining length
+
+    for (let i = 0; i < remainingLength; i++) {
+        const randomChar = getRandom (possibleCharacters);
+        guaranteedCharacters (randomChar);
+        
+    }
   
     var password = guaranteedCharacters
 
