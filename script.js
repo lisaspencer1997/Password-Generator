@@ -66,18 +66,28 @@ function getPasswordOptions() {
   function getRandom(arr) {
     // Need a variable to hold the password as it's being generated
     // Need a variable to hold the index that's being generated
-  
     // For loop that loops the number of times that matches the length the user chose
     // Generate a random number
     // That number is the index for a character in the mega-array
     // So then, mega-array[generated-index] is the actual character
     // Add that character to the password
-  
+    var randomIndex = math.floor(Math.random() * arr.length);
+    var randomElement = arr[randomIndex];
+    return randomElement;
     // Once we finish the for loop, return the generated password
   }
   
   // Function to generate password with user input
   function generatePassword() {
+    var options = getPasswordOptions();
+
+    // if the user cancels the prompt or provides the wrong input, return an empty string
+    if (!options) {
+        return null;
+    }
+
+    var possibleCharacters = [];
+    var guaranteedCharacters = [];
   
   }
   
