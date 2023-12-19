@@ -88,8 +88,18 @@ function getPasswordOptions() {
 
     var possibleCharacters = [];
     var guaranteedCharacters = [];
+
+    if (options.includeSpecialCharacters) {
+        possibleCharacters =
+        possibleCharacters.concat(specialCharacters);
+        guaranteedCharacters.push
+    }
   
+
+
   }
+
+
   
   // Get references to the #generate element
   var generateBtn = document.querySelector('#generate');
