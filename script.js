@@ -109,6 +109,10 @@ function getPasswordOptions() {
         possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
         guaranteedCharacters.push(getRandom(upperCasedCharacters));
     }
+
+    var remainingLength = options.length - guaranteedCharacters.length;
+
+    // need a for loop to run through the remaining length
   
     var password = guaranteedCharacters
 
